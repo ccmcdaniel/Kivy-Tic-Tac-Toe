@@ -3,6 +3,7 @@ from kivy.uix.button import Button
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.utils import get_color_from_hex as hex
 from kivy.properties import StringProperty
@@ -23,3 +24,14 @@ class PlayerScoreHUD(BoxLayout):
     bg_color = ColorProperty(hex("#B24141"))
     bottom_left = NumericProperty(0)
     bottom_right = NumericProperty(20)
+
+
+class BoardTile(ToggleButton):
+    pass
+
+class GameBoard(GridLayout):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        
+        for i in range(9):
+            self.add_widget(BoardTile())
