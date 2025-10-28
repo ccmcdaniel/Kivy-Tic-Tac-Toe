@@ -1,0 +1,20 @@
+#:kivy 1.0
+
+<PlayerScoreHUD@BoxLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: root.bg_color
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [0, 0, root.bottom_right, root.bottom_left]
+            
+    Label:
+        text: root.name
+    
+    Label: 
+        text: root.score
+
+   

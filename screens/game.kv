@@ -1,0 +1,30 @@
+#:kivy 1.0
+#:import hex kivy.utils.get_color_from_hex
+
+<GameScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: (1, None)
+            height: 80
+
+            PlayerScoreHUD:
+                player: 'Player 1'
+                score: '0'
+                size_hint: (0.25, 1)
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: (0.5, 1)
+
+            PlayerScoreHUD:
+                player: 'Player 2'
+                score: '0'
+                size_hint: (0.25, 1)
+                bottom_left: 20
+                bottom_right: 0
+
+        BoxLayout:
+            orientation: 'horizontal'
