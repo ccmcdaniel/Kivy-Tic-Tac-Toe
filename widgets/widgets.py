@@ -22,8 +22,12 @@ class PlayerScoreHUD(BoxLayout):
     name = StringProperty("Player NA")
     score = StringProperty("XX")
     bg_color = ColorProperty(hex("#B24141"))
+    text_color = ColorProperty(hex("#000000"))
+    
+    top_left = NumericProperty(0)
+    top_right = NumericProperty(0)
     bottom_left = NumericProperty(0)
-    bottom_right = NumericProperty(20)
+    bottom_right = NumericProperty(0)
 
 
 class BoardTile(ToggleButton):

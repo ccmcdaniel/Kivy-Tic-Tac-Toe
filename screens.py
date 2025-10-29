@@ -14,3 +14,6 @@ class CoinTossResultScreen(Screen):
 
 class GameScreen(Screen):
     pass
+
+class GameResultScreen(Screen):
+    pass
